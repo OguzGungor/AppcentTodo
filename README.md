@@ -14,7 +14,7 @@
 Docker images are available at Docker Hub as oguz123/appcent-todo-couchbase for couchbase and oguz123/appcent-todo-springbackend for backend application. To run application on docker,
 * install docker on your computer
 * run ```docker pull oguz123/appcent-todo-springbackend``` in command prompt.
-* * run ```docker pull oguz123/appcent-todo-couchbase``` in command prompt.
+* run ```docker pull oguz123/appcent-todo-couchbase``` in command prompt.
 * go to docker-compose repository by calling ```cd docker-compose```
 * run ```docker-compose up```
 
