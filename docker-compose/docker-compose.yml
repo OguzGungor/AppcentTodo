@@ -1,0 +1,35 @@
+version : '2'
+
+services:
+    couchbase:
+        image: oguz123/appcent-todo-couchbase
+        ports:
+            - 8091:8091
+            - 8092:8092
+        environment:        
+            - COUCHBASE_ADMINISTRATOR_USERNAME=productDBName
+            - COUCHBASE_ADMINISTRATOR_PASSWORD=productDBPassword
+            - COUCHBASE_BUCKET=TodoApp
+            - COUCHBASE_BUCKET_PASSWORD=
+        networks: 
+            - todonetwork
+
+    spring-boot:
+        image: oguz123/appcent-todo-springbackend
+        ports:
+            - 8081:8081
+            - 8082:8082
+        networks: 
+            - todonetwork
+        depends_on: 
+            - couchbase            
+        environment:
+            - COUCHBASE_HOST=couchbase
+            - COUCHBASE_BUCKET=TodoApp
+            - COUCHBASE_BUCKET_PASSWORD=
+        restart: always
+        
+networks:
+    todonetwork:
+        driver: bridge
+        
