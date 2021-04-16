@@ -1,6 +1,6 @@
 # AppcentTodo
 
-## Stack##
+## Stack
 * Java8
 * Couchbase
 * Spring Boot
@@ -9,4 +9,4 @@
 * Docker
 * JUnit and Mockito
 
-
+## 1 How to build
