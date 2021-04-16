@@ -11,6 +11,15 @@
 
 ## Docker
 
+Docker images are available at Docker Hub as oguz123/appcent-todo-couchbase for couchbase and oguz123/appcent-todo-springbackend for backend application. To run application on docker,
+* install docker on your computer
+* run ```docker pull oguz123/appcent-todo-springbackend``` in command prompt.
+* * run ```docker pull oguz123/appcent-todo-couchbase``` in command prompt.
+* go to docker-compose repository by calling ```cd docker-compose```
+* run ```docker-compose up```
+
+## Usage
+
 ### Couchbase
 
 Application is database dependent and configured to use couchbase, therefore couchbase is required to get full functionality. Application uses configurations below:
@@ -24,7 +33,7 @@ If configurations in code is not changed, then set database settings accordingly
 
 ### How to build
 
-It is a Spring Boot application, so calling ```mvn install``` in directory pom.xml exists is enough to build. Maven tool is required.
+It is a Spring Boot application, so calling ```mvn install``` in directory pom.xml exists is enough to build. Maven tool is required. ```pom.xml``` exists in ```/toDoApp``` directory.
 
 ### Running test suites
 
